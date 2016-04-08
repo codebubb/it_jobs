@@ -13,7 +13,7 @@ Skill.create([{name: "Java"},{name: "Scala"},{name: "Jenkins"},{name: "Python"},
   Job.create([
     {title: "Senior Java Developer - (Agile, Java, Scala)", description: "This is a key role within the Digital Retail Development Team, building advanced software solutions for our on-line business. The Java team are responsible for building a wide range of SOA services that support the development of web and mobile applications.
 
-  We take an API First approach to our service development and are looking for people experienced in delivering a wide range of services and capabilities that cut across our entire company business.
+  We take an <b>API First approach</b> to our service development and are looking for people experienced in delivering a wide range of services and capabilities that cut across our entire company business.
 
   You'll take a leading role in the development of our API First strategy, helping to deliver a range of services that are used both by internal development teams, external third parties and customers
   Take a very involved role in the various agile activities, including leading planning and estimating sessions and reporting progress to their assigned project lead and/or project manager

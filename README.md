@@ -4,4 +4,5 @@
 Create job postings and assign various tech skills to them.
   * Uses HABTM table to associate skills with Jobs
   * Uses standard HTML multi-select box (CTRL + Click to select multiple)
+  * TinyMCE is used for formatting in Job descriptions.
   * Bootstrap

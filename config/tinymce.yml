@@ -1,0 +1,7 @@
+toolbar:
+  - styleselect | bold italic | undo redo
+  - image | lin
+plugins:
+  - link
+menubar: false
+statusbar: false

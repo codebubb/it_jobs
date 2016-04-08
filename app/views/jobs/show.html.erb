@@ -7,7 +7,7 @@
 
 <p>
   <strong>Description:</strong>
-  <%= @job.description %>
+  <%= @job.description.html_safe() %>
 </p>
 
 <ul>
@@ -31,5 +31,5 @@
   <%= @job.url %>
 </p>
 
-<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Edit', edit_job_path(@job), 'data-no-turbolink' => true %> |
 <%= link_to 'Back', jobs_path %>
