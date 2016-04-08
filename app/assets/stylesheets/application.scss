@@ -18,21 +18,41 @@
 @import 'bootstrap';
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300);
 
-$purple: #7A1985;
+$purple: #653E83;
+$light-purple: #695a74;
+
+body, html{
+  height: 100%; 
+}
 body{
   font-family: 'Lato', sans-serif;
-}
 
+}
+.navbar, body{
+  background: $light-purple;
+}
+.navbar{
+  border: none;
+  margin: 0;
+}
+.container{
+  background: white;
+  background-image: image-url('halftone.png');
+  height: 100%;
+  min-height: 100%;
+
+}
 h2{
   color: $purple;
 }
 
 .job{
-  padding: 2em;
+  background-color: white;
+  padding: 1.5em;
   border: 2px solid rgb(57, 46, 57);
   box-shadow: 0px 0px 10px 10px rgba(57, 46, 57, 0.04);
   border-radius: 8px;
-  margin: 2em 0;
+  margin: 1.5em 0;
   font-size: 1.2em;
   transition: all .2s ease;
   &:hover{
