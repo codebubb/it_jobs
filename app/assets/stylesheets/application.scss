@@ -13,3 +13,33 @@
  *= require_tree .
  *= require_self
  */
+
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+
+$purple: #7A1985;
+body{
+  font-family: 'Lato', sans-serif;
+}
+
+h2{
+  color: $purple;
+}
+
+.job{
+  padding: 2em;
+  border: 2px solid rgb(57, 46, 57);
+  box-shadow: 0px 0px 10px 10px rgba(57, 46, 57, 0.04);
+  border-radius: 8px;
+  margin: 2em 0;
+  font-size: 1.2em;
+  transition: all .2s ease;
+  &:hover{
+    transform: scale(1.01);
+  }
+  span{
+    color: $purple;
+  }
+
+}

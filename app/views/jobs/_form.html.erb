@@ -1,5 +1,5 @@
 <%= tinymce_assets %>
-<%= form_for(@job) do |f| %>
+<%= form_for @job do |f| %>
   <% if @job.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h2>
@@ -12,29 +12,29 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :description %><br>
     <%= f.text_area :description, class: "tinymce" %>
   </div>
   <%= tinymce %>
-  <div class="field">
-    <%= f.select :skills, options_for_select(Skill.all.map { |s| s.name }, @job.skills.map { |s| s.name }), {}, {multiple: true} %>
+  <div class="formgroup">
+    <%= f.select :skills, options_for_select(Skill.all.map { |s| s.name }, @job.skills.map { |s| s.name }), {}, {multiple: true, class: "form-control"} %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :company %><br>
-    <%= f.text_field :company %>
+    <%= f.text_field :company, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :salary %><br>
-    <%= f.number_field :salary %>
+    <%= f.number_field :salary, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :url %><br>
-    <%= f.text_field :url %>
+    <%= f.text_field :url, class: "form-control" %>
   </div>
   <div class="actions">
     <%= f.submit %>

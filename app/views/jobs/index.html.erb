@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Jobs</h1>
+<h2>Latest Jobs</h2>
   <% @jobs.each do |job| %>
-  <div class="job">
-    <%= link_to "#{job.title} @ #{job.company}", job %>
+  <div class="job text-center">
+    <%= link_to "#{job.title}<br/><span> @ #{job.company}</span>".html_safe, job %>
   </div>
   <% end %>
 
