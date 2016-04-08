@@ -20,6 +20,9 @@
     <%= f.text_area :description %>
   </div>
   <div class="field">
+    <%= f.select :skills, options_for_select(Skill.all.map { |s| s.name }, @job.skills.map { |s| s.name }), {}, {multiple: true} %>
+  </div>
+  <div class="field">
     <%= f.label :company %><br>
     <%= f.text_field :company %>
   </div>

@@ -25,9 +25,10 @@ class JobsController < ApplicationController
   # POST /jobs.json
   def create
     @job = Job.new(job_params)
-
+    @job.skills.append skills_params
     respond_to do |format|
       if @job.save
+
         format.html { redirect_to @job, notice: 'Job was successfully created.' }
         format.json { render :show, status: :created, location: @job }
       else
@@ -40,6 +41,7 @@ class JobsController < ApplicationController
   # PATCH/PUT /jobs/1
   # PATCH/PUT /jobs/1.json
   def update
+    @job.skills.replace skills_params
     respond_to do |format|
       if @job.update(job_params)
         format.html { redirect_to @job, notice: 'Job was successfully updated.' }
@@ -65,6 +67,10 @@ class JobsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_job
       @job = Job.find(params[:id])
+    end
+
+    def skills_params
+      params.require(:job).permit(:skills => [])[:skills].map { |s| Skill.find_by_name(s) if !s.blank? }.compact
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
